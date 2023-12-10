@@ -355,8 +355,10 @@ app.get('/new', async (req, res) => {
 app.post('/chat', async (req, res) => {
   var msg = req.body.msg;
 
-  if (currentThreadId == "") 
+  if (req.body.threadId == "") 
     currentThreadId = await createThread();
+  else
+    currentThreadId = req.body.threadId;
 
   currentMsgId = await createMessage(currentThreadId, msg);
 
