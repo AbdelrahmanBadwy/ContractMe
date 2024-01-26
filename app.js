@@ -1,3 +1,5 @@
+
+// comment1
 import { config } from "dotenv";
 config();
 let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
